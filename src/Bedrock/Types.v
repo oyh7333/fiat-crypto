@@ -29,6 +29,7 @@ Class ok {p:parameters} :=
   {
     semantics_ok : Semantics.parameters_ok semantics;
     word_size_in_bytes_ok : 0 < word_size_in_bytes;
+    word_size_in_bytes_eq : Semantics.width = 8 * word_size_in_bytes;
     varname_gen_unique :
       forall i j : nat, varname_gen i = varname_gen j <-> i = j;
   }.

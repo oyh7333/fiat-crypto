@@ -63,6 +63,7 @@ Section Proofs.
     constructor.
     { exact BasicC64Semantics.parameters_ok. }
     { reflexivity. }
+    { reflexivity. }
     { exact decimal_varname_gen_unique. }
   Defined.
 
