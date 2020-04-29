@@ -58,6 +58,7 @@ src/ArithmeticCPS/WordByWordMontgomery.v
 src/Bedrock/Defaults.v
 src/Bedrock/Defaults32.v
 src/Bedrock/Defaults64.v
+src/Bedrock/SelectParameters.v
 src/Bedrock/StandaloneHaskellMain.v
 src/Bedrock/StandaloneOCamlMain.v
 src/Bedrock/Stringification.v

@@ -51,10 +51,7 @@ Local Coercion inject_Z : Z >-> Q.
 Local Coercion Z.pos : positive >-> Z.
 
 Existing Instance Defaults32.default_parameters.
-
-Axiom BasicC32Semantics_parameters_ok : Semantics.parameters_ok BasicC32Semantics.parameters.
-(* TODO: why does BasicC32Semantics not have a Semantics.parameters_ok instance? *)
-Existing Instance BasicC32Semantics_parameters_ok.
+Existing Instance Defaults32.default_parameters_ok.
 
 Section Proofs.
   Context (n : nat := 5%nat)
