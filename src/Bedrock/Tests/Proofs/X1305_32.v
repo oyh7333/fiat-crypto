@@ -59,15 +59,6 @@ Section Proofs.
           (c : list (Z * Z) := [(1,5)])
           (machine_wordsize : Z := 32).
 
-  Instance p_ok : Types.ok.
-  Proof.
-    constructor.
-    { exact BasicC32Semantics_parameters_ok. }
-    { reflexivity. }
-    { reflexivity. }
-    { exact decimal_varname_gen_unique. }
-  Defined.
-
   Local Notation M := (s - Associational.eval c)%Z.
   Local Notation eval :=
     (eval (weight (Qnum (inject_Z (Z.log2_up M) / inject_Z (Z.of_nat n)))
