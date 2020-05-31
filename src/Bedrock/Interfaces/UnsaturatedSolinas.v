@@ -733,11 +733,9 @@ Section __.
         specialize (H2 H1); autounfold with defs in H1;
         cbn [precondition] in H1; cleanup
       end.
-      match goal with
-      | _ =>
-        let e := match goal with
-                 | H : postcondition to_bytes _ ?e |- _ => e end in
-        idtac e
+      lazymatch goal with
+      | H : postcondition to_bytes _ ?e |- _ =>
+          idtac e
       | H : context [postcondition] |- _ =>
         let T := match type of H with ?T => T end in
         fail "wanted [postcondition to_bytes _ _], found" T
